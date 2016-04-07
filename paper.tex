@@ -1,0 +1,264 @@
+\newcount\draft\draft=0
+\newcount\cameraready\cameraready=0
+
+% This version uses the latex2e styles, not the very ancient 2.09 stuff.
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{usenix,epsfig,endnotes}
+\usepackage[T1]{fontenc}
+\usepackage{soul} % for using hl{}
+\usepackage{graphicx,epsfig,sped,times,wide}
+\usepackage{algorithm,url}
+\usepackage{clrscode}
+\usepackage[noeka]{mathrmletter}
+%\usepackage{subfigure}
+\usepackage{subfig}
+\usepackage{soul}
+\usepackage{url}
+\usepackage{epstopdf}
+\usepackage{ulem}
+\usepackage{comment}
+\usepackage{amsmath}
+\renewcommand{\em}{\normalem}
+
+\usepackage{multirow}
+\usepackage[noend]{algorithmic}
+%\usepackage{natbib}
+\usepackage[bookmarks, colorlinks=false, plainpages = false]{hyperref}
+%\usepackage[bookmarksnumbered,colorlinks,backref, bookmarks, breaklinks]{hyperref}
+%\urlstyle{rm} %so it doesn’t use a typewriter font for url’s.
+
+\epstopdfsetup{outdir=./}
+
+\ifnum\draft=0
+% \input{revision}
+% \usepackage{drafthead}
+\fi
+
+%Begin boilerplate
+\newfont{\mycrnotice}{ptmr8t at 7pt}
+\newfont{\myconfname}{ptmri8t at 7pt}
+\let\crnotice\mycrnotice%
+\let\confname\myconfname%
+%End boilerplate
+
+\newcommand{\vitag} {ViTag}
+\newcommand{\reader} {ViReader}
+\newcommand{\retro} {Retro-VLC}
+
+\newenvironment{Itemize}%
+{\begin{itemize}%
+\setlength{\itemsep}{0pt}%
+\setlength{\topsep}{0pt}%
+\setlength{\partopsep}{0pt}%
+\setlength{\parskip}{0pt}}%
+{\end{itemize}}
+\setlength{\leftmargini}{0pt}%
+
+\newenvironment{Enumerate}%
+{\begin{enumerate}%
+\setlength{\itemsep}{0pt}%
+\setlength{\topsep}{0pt}%
+\setlength{\partopsep}{0pt}%
+\setlength{\parskip}{0pt}}%
+{\end{enumerate}}
+\setlength{\leftmargini}{1.25em}%
+
+%----special-caption-magic--------%
+
+\makeatletter
+  \newcommand\figcaption{\def\@captype{figure}\caption}
+  \newcommand\tabcaption{\def\@captype{table}\caption}
+\makeatother
+
+%---- Theorem Environment ----------------%
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newenvironment{xproof}[1][Proof]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{xdefinition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{xexample}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{xremark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+%\newenvironment{proof}[1][Proof]{\begin{trivlist}
+%\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\newcommand{\xqed}{\nobreak \ifvmode \relax \else
+      \ifdim\lastskip<1.5em \hskip-\lastskip
+      \hskip1.5em plus0em minus0.5em \fi \nobreak
+      \vrule height0.75em width0.5em depth0.25em\fi}
+
+\newcommand{\xref}[1]{\S\ref{#1}}
+\newcommand{\pxref}[1]{(\S\ref{#1})}
+\newcommand{\algref}[1]{Algorithm~\ref{#1}}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\para}[1]{\vskip 0.06in\noindent {\bf #1} }
+
+
+% peanut gallery comments
+%
+%
+% NOTE: Comment *in* the line below if you want a draft with no red comments.
+% NOTE: Doing so may replace some of the red comments with 
+%       extra spaces or newlines.
+%\def\noeditingmarks{}
+%
+\newcommand{\textred}[1]{\textcolor{red}{#1}}
+\ifx\noeditingmarks\undefined
+   \newcommand{\pgwrapper}[2]{\textred{#1: #2}}
+\else
+   \newcommand{\pgwrapper}[2]{}
+\fi
+\newcommand{\sg}[1]{\pgwrapper{SG}{#1}}
+\newcommand{\hh}[1]{\pgwrapper{HH}{#1}}
+\newcommand{\dk}[1]{\pgwrapper{DK}{#1}}
+% end peanut gallery comments
+
+\usepackage{xxx} % somewhat nicer peanut-gallery comments: \xxx[whom]{comment}
+
+%\renewcommand{\dbltopfraction}{0.1}
+\frenchspacing
+
+% margins
+\setlength{\topmargin}{-0.2in} 
+\setlength{\textheight}{9.3in}
+\setlength{\evensidemargin}{-.2in}
+\setlength{\textwidth}{6.99in}
+\setlength{\columnsep}{.33in}
+%\setlength{\parindent}{.2in}
+%\renewcommand{\topfraction}{1.00}
+%\renewcommand{\textfraction}{0.20}
+
+% section styles - ACM bastards
+\makeatletter
+
+\global\def\section{\@startsection {section}{1}{\z@}%
+                                   {2ex \@plus 1ex \@minus .1ex}%
+                                   {1ex \@plus.2ex}%
+                                   {\normalfont\bfseries\scshape\fontsize{11}{13}\selectfont}}
+\global\def\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {2ex\@plus 1ex \@minus .1ex}%
+                                     {1ex \@plus .2ex}%
+                                     {\normalfont\bfseries\fontsize{10}{12}\selectfont}}
+%%\global\def\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+%%                                     {2ex\@plus 1ex \@minus .1ex}%
+%%                                     {1ex \@plus .2ex}%
+%%                                     {\normalfont\itshape\fontsize{10}{12}\selectfont}}
+
+% \def\@maketitle{\newpage
+%  \null
+%  \setbox\@acmtitlebox\vbox{%
+% \baselineskip 20pt
+% \vskip 2em                   % Vertical space above title.
+%    \begin{center}
+%     {\ttlfnt \@title\par}       % Title set in 18pt Helvetica (Arial) bold size.
+%     \vskip 1.5em                % Vertical space after title.
+% %This should be the subtitle.
+% {\subttlfnt \the\subtitletext\par}\vskip 1.25em%\fi
+%     {\baselineskip 16pt\aufnt   % each author set in \12 pt Arial, in a
+%      \lineskip .5em             % tabular environment
+%     \begin{tabular}[t]{c}\hspace{-.15cm}\@author
+% %     \begin{tabular}[t]{p{\auwidth}}\centering\@author
+%      \end{tabular}\par}
+%     \vskip 1.5em               % Vertical space after author.
+%    \end{center}}
+%  \dimen0=\ht\@acmtitlebox
+%  %\advance\dimen0 by -12.75pc\relax % Increased space for title box -- KBT
+%  \advance\dimen0 by -10pc\relax % Increased space for title box -- KBT
+%  \unvbox\@acmtitlebox
+%  \ifdim\dimen0<0.0pt\relax\vskip-\dimen0\fi}
+
+\def\sharedaffiliation{%
+\end{tabular}
+\begin{tabular}{c}}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+%VINFIX for overflow
+\font\ttlfnt=phvb8t at 17pt
+
+\title{\retro: Low-Power Duplex Visible Light Communication}
+%%Rethinking Communication Primitives for Backscatter Devices
+
+\newcommand{\supsym}[1]{\raisebox{6pt}{{\footnotesize #1}}}
+
+
+\widowpenalty = 10000
+
+
+\author{
+%Working Draft\\
+XXX\\
+}
+
+
+%don't want date printed
+\date{}
+\maketitle
+
+\begin{sloppypar}
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+% A category with the (minimum) three required fields
+
+% one file per section means fewer conflicts to resolve during multiparty
+% editing
+
+\input{intro_2}
+\input{related}
+\input{background}
+\input{principle}
+\input{\vitag}
+%\input{\reader}
+\input{discussion}
+\input{network}
+\input{implementation}
+\input{evaluation}
+\input{conclusion}
+
+% make the bibliography compact: use only in desperate situations
+\let\oldthebibliography=\thebibliography
+\let\endoldthebibliography=\endthebibliography
+\renewenvironment{thebibliography}[1]{%
+    \begin{oldthebibliography}{#1}%
+      \setlength{\parskip}{0ex}%
+      \setlength{\itemsep}{0ex}%
+}%
+{%
+\end{oldthebibliography}%
+}
+{
+\small
+\bibliographystyle{abbrv}
+\bibliography{ourbib}
+\begin{appendix}
+\input{appendix}
+\end{appendix}
+}
+\small
+\end{sloppypar}
+\end{document}
+
+

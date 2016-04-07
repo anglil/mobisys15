@@ -1,0 +1,80 @@
+\section{Requirements and Preliminaries}
+\label{sec:background}
+
+\subsubsection{Requirements}
+
+Our goal is to establish a bi-directional communication link over visible lights. 
+Understanding the dual-paradigm nature of VLC over the lighting infrastructure where the primary function is illumination and the primary usage scenario would be communication with low power mobile devices or sensor nodes, we have the following two basic requirements for the design. 
+
+\noindent\emph{\texttt{Requirement 1:}} Establish a low-power, duplex visible light communication link. Hopefully, to achieve a battery-free by harvesting the light energy from the illumination LED. 
+
+\noindent\emph{\texttt{Requirement 2:}} Impose no constraints on the actual usage. This implies the practical working range in normal indoor situations, and no special effort to make in order to use the system. 
+
+To achieve a duplex visible link, one possibility is to use a symmetric design, that is, using an LED on the mobile device or sensor node to emit light signal so as to be picked up by a light sensor on the lighting LED. Unfortunately, to shoot at a practical working distance (to the light typically installed on the ceiling), it is not quite affordable energy-wise. Similar to the radio propagation, the light energy attenuates quickly when propagation distance increases, at a rate of inverse square distance \cite{path model}.
+One way to extend the communication range is to use directional signal, ideally a laser. However, that would require careful focusing and orientation between the light source and the mobile device. 
+
+Another possible way towards more affordable power is to leverage the light from the lighting infrastructure, which is usually of high power. This is similar to the design of passive RFID systems where the tag communication with the reader by reflecting the incoming radio signal. For instance, we may use a \textit{mirror} to reflect the light from the LED back to a light sensor collocated on the LED. However, a mirror makes highly directional reflection. Such a design would also require carefully orienting the mobile device and violate the practicality requirement. 
+
+Inspired by the free space laser communication where special modulating retro-reflector \cite{mrr} is used, we may use a retro-reflector for our purpose. Below we introduce the retro-reflector and present some favorable properties using ordinary retro-reflector material. 
+
+
+\begin{figure*}[!t]
+\vskip -0.1in
+\centering
+{\footnotesize
+\begin{tabular}{ccccc}
+\epsfig{file=../illustrations/mrr1.eps, height=0.2\columnwidth} &
+\epsfig{file=../illustrations/mrr2.eps, height=0.2\columnwidth} & 
+\epsfig{file=../illustrations/mrr3.eps, height=0.2\columnwidth} & 
+\epsfig{file=../illustrations/mrr4.eps, height=0.2\columnwidth} &
+\epsfig{file=../illustrations/retroreflector.eps, height=0.2\columnwidth} \\
+{(a) TX $45\degree$, RX $45\degree$} & 
+{(b) TX $45\degree$, RX $135\degree$} & 
+{(c) TX $45\degree$, RX $90\degree$} & 
+{(d) TX $90\degree$, RX $90\degree$} &
+{(e) Ideal Retro-reflector} \\
+\end{tabular}
+}
+\vskip -0.1in
+\caption{\footnotesize{\bf Illustration of the Retro-reflector.} Blah Blah.}
+\label{fig:retrolcd}
+\vspace{-1em}
+\end{figure*}
+
+
+\subsubsection{Preliminaries}
+
+\p{Principle illustration}
+\paragraph{Retro-reflector} 
+Retro-reflector is a device that operates by returning light back to the light source along the same light direction with a minimum of scattering~\cite{rr}. Retro-reflectors are widely used on road signs, bicycles, and clothing for road safety. From a microscopic view, a retro-reflector is composed of cells, each of which is a corner cube as shown in Fig.~\ref{fig:retrolcd} (e). When a light beam hits one of the cells, the light is turned around via two adjacent reflections. 
+
+\p{Actual effects of the ordinary, COTS material -- fabric}
+
+
+%\paragraph{Modulating Retro-reflector}
+%Modulating retro-reflector (MRR)~\cite{mrr} consists of a retro-reflector and a modulator for optical communications. An MRR operates as a passive sources which transmits bits by varying the intensity of the reflected light beam. MRR is widely used in free space communication where the other side is a laser. Existing MRR systems~\cite{expensive,expensive2} is usually of a large size, and modulation is commonly achieved with a high-end electroabsorption modulator altering the absorption spectrum by applying an electric field. Consequently, such setting is ill-suited for our scenarios which require a low-cost solution.
+
+
+
+\paragraph{Liquid Crystal Display}
+Once we have methods to reflect incoming lights, we still need to modulate (\ie encoding information bits) to the light carrier being reflected by changing either its amplitude, frequency or phase. Special retro-reflector can the amplitude by electronically change the reflection or absorption using for example MEMS technologies \cite{}. \qm{Their size is big.}\todo{Need confirm!} For our case, we  hope to use ordinary, off-the-shelf material. In order to modulate the lights reflected by such fabric, we resort to a liquid crystal display that can pass or block light under the control of electrical field. 
+
+\p{basic structure of LCD: polarized glass, liquid crystal. Molecules arrangement under high/low voltage. } 
+
+
+LCD is \todo{polarized glass + liquid, liquid can polarize incoming light, } LCDs use the light properties of liquid crystals that are controlled by the voltage added on them. When the LCD is on, the incoming light is able to pass the LCD and hit the retro-reflector; When the LCD is off, the incoming light is rejected by the LCD. Therefore, LCDs can be used as modulators for MRRs. 
+%However, one disadvantage of LCDs are their low refresh rate, e.g., 60 or 75 Hz, which is too low for data communication. Fortunately, we find \textit{LCD shutters} with much higher refresh rate (up to 1KHz \hl{cite}). Fig.~\ref{fig:retrolcd} shows the basic principle of a retro-reflector with an LCD coverage.
+\begin{figure}[th]
+   \centering
+   \includegraphics[width=0.8\columnwidth]{link.pdf}
+   \caption{Downlink and uplink.}
+   \label{fig:link}
+   \vskip -3mm
+\end{figure}
+
+\figref{fig:link} illustrates the modulated uplink lights using LCD. We notice that the commercially off-the-shelf LCDs are of low refreshing rate. Therefore, the symbol length is relatively much longer than the carrier waveform.
+
+
+
+
+

@@ -1,0 +1,87 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{usenix-2}
+
+\input{preamble}
+
+\hyphenation{infra-struc-ture}
+\epstopdfsetup{outdir=./}
+%\renewcommand{\baselinestretch}{0.96}
+
+\begin{document}
+
+\title{\retro: Enabling Low-power Duplex Visible Light Communication}
+\author{Angli Liu, Jiangtao Li, Guobin Shen, Liqun Li, Chao Sun and Feng Zhao \\
+Microsoft Research, Beijing, China}
+
+%\date{}
+\maketitle
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+%
+% section by section tex files
+%
+\input{intro}
+%\input{background}
+\input{related}
+\input{bg}
+\input{ov}
+%\input{principle_2}
+\input{design}
+%\input{vitag_2}
+%\input{network}
+\input{implementation}
+\input{evaluation}
+\input{discussion}
+\input{conclusion}
+\begin{appendix}
+\input{appendix}
+\end{appendix}
+
+\small
+%\balance
+\bibliographystyle{abbrv}
+\bibliography{ourbib}
+
+
+
+\end{document}
+
+%% Examples of placing three figures, each with a different title, in a row
+\begin{figure*}[t]
+\minipage{0.33\textwidth}
+  \includegraphics[width=\textwidth]{  }
+  \caption{    }\label{fig:    }
+\endminipage\hfill
+\minipage{0.33\textwidth}
+  \includegraphics[width=\textwidth]{  }
+  \caption{    }\label{fig:    }
+\endminipage\hfill
+\minipage{0.33\textwidth}%
+  \includegraphics[width=\textwidth]{  }
+  \caption{    }\label{fig:    }
+\endminipage
+\end{figure*}
+
+%% Examples of placing three sub-figures in a row.
+\begin{figure*}[!th]
+%  \vspace{-0.1in}
+  \begin{center}
+      \subfigure[Magnetic]{
+        \includegraphics[width=0.33\textwidth]{  }\label{fig:  }
+      } %\hskip -4em
+      \hfill
+      \subfigure[WiFi]{
+        \includegraphics[width=0.33\textwidth]{  }\label{fig:  }
+      } %\hskip -4em
+      \hfill
+      \subfigure[Magnetic + WiFi]{
+        \includegraphics[width=0.33\textwidth]{  }\label{fig:  }
+      }
+%      \vspace{-1em}
+      \caption{  }\label{fig:  }
+  \end{center}
+%  \vspace{-0.3in}
+\end{figure*}

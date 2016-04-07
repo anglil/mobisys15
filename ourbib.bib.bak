@@ -1,0 +1,407 @@
+@article{fundamental1,
+  title={Fundamental analysis for visible-light communication system using LED lights},
+  author={Komine, T. and Nakagawa, M.},
+  journal={Consumer Electronics, IEEE Transactions on},
+  year={2004},
+  publisher={IEEE}
+}
+
+@article{standard,
+  title={IEEE 802.15. 7 visible light communication: modulation schemes and dimming support},
+  author={Rajagopal, S. and Roberts, R. D and Lim, S.-K.},
+  journal={Communications Magazine, IEEE},
+  year={2012},
+  publisher={IEEE}
+}
+
+@article{retro1,
+  title={Retroreflecting optical modulator using an MEMS deformable micromirror array},
+  author={Chan, T. K and Ford, J. E},
+  journal={Journal of lightwave technology},
+  year={2006},
+  publisher={IEEE}
+}
+
+@misc{retro2,
+  title={Modulated-retroreflector based optical identification system},
+  author={Mansell, D. N. and Durkin, P. S. and Whitfield, G. N. and Morley, D. W.},
+  year={2002},
+  publisher={Google Patents},
+  note={US Patent 6,493,123}
+}
+
+@article{location1,
+  title={Luxapose: Indoor Positioning with Mobile Phones and Visible Light},
+  author={Kuo, Y.-S. and Pannuto, P. and Hsiao, K.-J. and Dutta, P.},
+  journal={MobiCom'14}
+}
+
+@inproceedings{location2,
+  title={Visual light landmarks for mobile devices},
+  author={Rajagopal, N. and Lazik, P. and Rowe, A.},
+  booktitle={IPSN'14}
+}
+
+@inproceedings{location3,
+  title={Epsilon: a visible light based positioning system},
+  author={Li, Liqun and Hu, Pan and Peng, Chunyi and Shen, Guobin and Zhao, Feng},
+  booktitle={NSDI'14}
+}
+
+@article{flawedsys1,
+  title={Integrated system of white LED visible-light communication and power-line communication},
+  author={Komine, T. and Nakagawa, M.},
+  journal={Consumer Electronics, IEEE Transactions on},
+  year={2003}
+}
+
+@article{flawedsys2,
+  title={100-Mb/s NRZ visible light communications using a postequalized white LED},
+  author={Le Minh, H. and O'Brien, D. and Faulkner, G. and Zeng, L. and Lee, K. and Jung, D. and Oh, Y. and Won, E. T.},
+  journal={Photonics Technology Letters, IEEE},
+  year={2009}
+}
+
+@inproceedings{flawedsys3,
+  title={Line-of-sight visible light communication system design and demonstration},
+  author={Cui, K. and Chen, G. and Xu, Z. and Roberts, R. D},
+  booktitle={CSNDSP'10},
+  year={2010}
+}
+
+@article{flawedsys4,
+  title={513 Mbit/s visible light communications link based on DMT-modulation of a white LED},
+  author={Vu{\v{c}}i{\'c}, J. and Kottke, C. and Nerreter, S. and Langer, K.-D. and Walewski, J. W},
+  journal={Journal of Lightwave Technology},
+  year={2010}
+}
+
+@inproceedings{led2led1,
+  title={Low-complexity visible light networking with led-to-led communication},
+  author={Giustiniano, D. and Tippenhauer, N. O. and Mangold, S.},
+  booktitle={Wireless Days, 2012 IFIP},
+  year={2012}
+}
+
+@article{led2led2,
+  title={Improved modulation speed of LED visible light communication system integrated to main electricity network},
+  author={Chow, CW and Yeh, CH and Liu, YF and Liu, Y},
+  journal={Electronics letters},
+  year={2011},
+  publisher={IET}
+}
+
+@inproceedings{led2led3,
+  title={An instantaneous photomultiplier gain calibration method for PET or gamma camera detectors using an LED network},
+  author={Li, Hongdi and Liu, Yaqiang and Xing, Tao and Wang, Yu and Uribe, Jorge and Baghaei, Hossain and Xie, Shuping and Kim, Soonseok and Ramirez, Rocio and Wong, Wai-Hoi},
+  booktitle={Nuclear Science Symposium Conference Record},
+  year={2003},
+  organization={IEEE}
+}
+
+@inproceedings{led2led4,
+  title={LED-to-LED visible light communication networks},
+  author={Schmid, Stefan and Corbellini, Giorgio and Mangold, Stefan and Gross, Thomas R},
+  booktitle={MobiHoc'13},
+}
+
+@inproceedings{led2led5,
+  title={OpenVLC: software-defined visible light embedded networks},
+  author={Wang, Qing and Giustiniano, Domenico and Puccinelli, Daniele},
+  booktitle={VLCS'14}
+}
+
+@article{ledmac1,
+  title={An optical CDMA system based on spectral encoding of LED},
+  author={Zaccarin, D and Kavehrad, M},
+  journal={Photonics Technology Letters},
+  year={1993},
+  publisher={IEEE}
+}
+
+@inproceedings{lowpowervlc1,
+  title={Pulsed mode red VCSEL for high speed VLC communication},
+  author={Feher, G{\'a}bor and Udvary, Eszter and Fuzy, C and Cseh, Tam{\'a}s and Berceli, Tibor},
+  booktitle={ICTON'12'}
+}
+
+@article{lowpowervlc2,
+  title={Solid-state light sources getting smart},
+  author={Schubert, E Fred and Kim, Jong Kyu},
+  journal={Science},
+  year={2005},
+  publisher={American Association for the Advancement of Science}
+}
+
+@article{lowpowervlc3,
+  title={Adaptive equalization system for visible light wireless communication utilizing multiple white LED lighting equipment},
+  author={Komine, Toshihiko and Lee, Jun Hwan and Haruyama, Shinichiro and Nakagawa, Masao},
+  journal={Wireless Communications, IEEE Transactions on},
+  year={2009}
+}
+
+@techreport{expensive,
+  title={A cat's eye multiple quantum well modulating retro-reflector},
+  author={Rabinovich, William S and Mahon, R and Goetz, P and Waluschka, E and Katzer, DS and Binari, S and Gilbreath, GC},
+  year={2006},
+  institution={DTIC Document}
+}
+
+@inproceedings{expensive2,
+  title={InGaAs multiple quantum well modulating retro-reflector for free-space optical communications},
+  author={Rabinovich, William S and Gilbreath, G Charmaine and Goetz, Peter G and Mahon, Rita and Katzer, D Scott and Ikossi-Anastasiou, Kiki and Binari, Steven C and Meehan, Timothy J and Ferraro, Mena and Sokolsky, Ilene and others},
+  booktitle={International Symposium on Optical Science and Technology},
+  year={2002},
+  organization={International Society for Optics and Photonics}
+}
+
+@inproceedings{eavesdrop1,
+  title={Dhwani: secure peer-to-peer acoustic NFC},
+  author={Nandakumar, Rajalakshmi and Chintalapudi, Krishna Kant and Padmanabhan, Venkat and Venkatesan, Ramarathnam},
+  booktitle={SIGCOMM'13}
+}
+
+@inproceedings{eavesdrop2,
+  title={nShield: a noninvasive NFC security system for mobiledevices},
+  author={Zhou, Ruogu and Xing, Guoliang},
+  booktitle={MobiSys'14}
+}
+
+@misc{solarsheet,
+  title = {{5528 Solar Panel}},
+  howpublished = "\url{http://www.dx.com/p/solar-power-panel-2v-20-25ma-5528#.VAbTPfm1YZ8}"
+}
+
+@misc{pdsheet,
+  title = {{SFH213 Photodiode}},
+  howpublished = "\url{http://www.dx.com/p/solar-power-panel-2v-20-25ma-5528#.VAbTPfm1YZ8}"
+}
+
+@misc{rr,
+  title = {{Retro-reflector Principle}},
+  howpublished = "\url{http://en.wikipedia.org/wiki/Retroreflector}"
+}
+
+@misc{mrr,
+  title = {{Modulating Retro-reflector}},
+  howpublished = "\url{http://en.wikipedia.org/wiki/Modulating_retro-reflector}"
+}
+
+@misc{camera1,
+  title = {{High-Speed Camera}},
+  howpublished = "\url{http://en.wikipedia.org/wiki/High-speed_camera}"
+}
+
+@misc{lcdprin,
+  title = {{LCD Principle}},
+  howpublished = "\url{http://qxwujoey.tripod.com/lcd.htm}"
+}
+
+http://multimedia.3m.com/mws/mediawebserver?mwsId=SSSSSu7zK1fslxtUNYt9o8_eev7qe17zHvTSevTSeSSSSSS--
+
+@misc{rrsheet,
+  title = {{3M Retro-reflector}},
+  howpublished = "\url{http://qxwujoey.tripod.com/lcd.htm}"
+}
+
+@misc{ble0,
+  title = {{ByteLight}},
+  howpublished = "\url{http://www.bytelight.com/}"
+}
+
+@inproceedings{ble1,
+  title={Visible light communications: Challenges and possibilities},
+  author={O'brien, Dominic and Zeng, Lubin and Le-Minh, Hoa and Faulkner, Grahame and Walewski, Joachim W and Randel, Sebastian},
+  booktitle={PIMRC'08}
+}
+
+@inproceedings{ble2,
+  title={Basic study on indoor location estimation using visible light communication platform},
+  author={Liu, Xiaohan and Makino, Hideo and Maeda, Yoshinobu},
+  booktitle={EMBS'08}
+}
+
+@inproceedings{ble3,
+  title={Lightsense: enabling spatially aware handheld interaction devices},
+  author={Olwal, Alex},
+  booktitle={ISMAR'06}
+}
+
+@inproceedings{ble4,
+  title={Design of an indoor self-positioning system for the visually impaired-simulation with rfid and bluetooth in a visible light communication system},
+  author={Liu, Xiaohan and Makino, Hideo and Kobayashi, Suguru and Maeda, Yoshinobu},
+  booktitle={EMBS'07}
+}
+
+@article{fullduplex1,
+  title={Full duplex MIMO radios},
+  author={Bharadia, Dinesh and Katti, Sachin},
+  journal={Self},
+  volume={1},
+  number={A2},
+  pages={A3},
+  year={2014}
+}
+
+@inproceedings{fullduplex2,
+  title={Full-duplex wireless communications using off-the-shelf radios: Feasibility and first results},
+  author={Duarte, Melissa and Sabharwal, Ashutosh},
+  booktitle={ASILOMAR'10}
+}
+
+@inproceedings{fullduplex3,
+  title={Achieving single channel, full duplex wireless communication},
+  author={Choi, Jung Il and Jain, Mayank and Srinivasan, Kannan and Levis, Phil and Katti, Sachin},
+  booktitle={MobiCom'10}
+}
+
+@article{fullduplex4,
+  title={Experiment-driven characterization of full-duplex wireless systems},
+  author={Duarte, Melissa and Dick, Chris and Sabharwal, Ashutosh},
+  journal={Wireless Communications, IEEE Transactions on}
+  year={2012}
+}
+
+@inproceedings{fullduplex5,
+  title={Empowering full-duplex wireless communication by exploiting directional diversity},
+  author={Everett, Evan and Duarte, Melissa and Dick, Chris and Sabharwal, Ashutosh},
+  booktitle={ASILOMAR'11}
+}
+
+@inproceedings{abc1,
+  title={Turbocharging ambient backscatter communication},
+  author={Parks, Aaron N and Liu, Angli and Gollakota, Shyamnath and Smith, Joshua R},
+  booktitle={SIGCOMM'14}
+}
+
+@inproceedings{abc2,
+  title={Ambient backscatter: wireless communication out of thin air},
+  author={Liu, Vincent and Parks, Aaron and Talla, Vamsi and Gollakota, Shyamnath and Wetherall, David and Smith, Joshua R},
+  booktitle={SIGCOMM'13}
+}
+
+@inproceedings{abc3,
+  title={Wi-fi backscatter: internet connectivity for RF-powered devices},
+  author={Kellogg, Bryce and Parks, Aaron and Gollakota, Shyamnath and Smith, Joshua R and Wetherall, David},
+  booktitle={SIGCOMM'14}
+}
+
+@article{abc4,
+  title={Leveraging Interleaved Signal Edges for Concurrent Backscatter},
+  author={Hu, Pan and Zhang, Pengyu and Ganesan, Deepak},
+  booktitle={MOBICOM},
+  year={2014}
+}
+
+@article{abc5,
+  title={Enabling Instantaneous Feedback with Full-duplex Backscatter},
+  author={Liu, Vincent and Talla, Vamsi and Gollakota, Shyamnath},
+  booktitle={MOBICOM'14}
+}
+
+@article{rfid1,
+  title={Dual-band slot-coupled dipole antenna for 900 MHz and 2.45 GHz RFID tag application},
+  author={Jeon, S and Yu, Y and Choi, J},
+  journal={Electronics letters},
+  year={2006},
+  publisher={IET}
+}
+
+@article{rfid2,
+  title={Operability of folded microstrip patch-type tag antenna in the UHF RFID bands within 865-928 MHz},
+  author={Ukkonen, Leena and Schaffrath, Marijke and Engels, Daniel W and Sydanheimo, L and Kivikoski, Markku},
+  journal={Antennas and Wireless Propagation Letters, IEEE},
+  year={2006}
+}
+
+@inproceedings{rfidsec1,
+  title={EPC RFID tag security weaknesses and defenses: passport cards, enhanced drivers licenses, and beyond},
+  author={Koscher, Karl and Juels, Ari and Brajkovic, Vjekoslav and Kohno, Tadayoshi},
+  booktitle={CCS'09}
+}
+
+@inproceedings{rfidsec2,
+  title={RFIDs and secret handshakes: Defending against ghost-and-leech attacks and unauthorized reads with context-aware communications},
+  author={Czeskis, Alexei and Koscher, Karl and Smith, Joshua R and Kohno, Tadayoshi},
+  booktitle={CCS'08}
+}
+
+@article{rfidsec3,
+  title={Physical access control for captured RFID data},
+  author={Kriplean, Travis and Welbourne, Evan and Khoussainova, Nodira and Rastogi, Vibhor and Balazinska, Magdalena and Borriello, Gaetano and Kohno, Tadayoshi and Suciu, Dan},
+  journal={Pervasive Computing, IEEE},
+  year={2007}
+}
+
+@inproceedings{rfidmac1,
+  title={A software radio-based uhf rfid reader for phy/mac experimentation},
+  author={Buettner, Michael and Wetherall, David},
+  booktitle={RFID'11}
+}
+
+@inproceedings{rfidmac2,
+  title={Dewdrop: An Energy-Aware Runtime for Computational RFID.},
+  author={Buettner, Michael and Greenstein, Benjamin and Wetherall, David},
+  booktitle={NSDI'11}
+}
+
+@inproceedings{rfidmac3,
+  title={An empirical study of UHF RFID performance},
+  author={Buettner, Michael and Wetherall, David},
+  booktitle={MobiCom'08}
+}
+
+@article{ledprin1,
+  title={Application of strontium silicate yellow phosphor for white light-emitting diodes},
+  author={Park, Joung Kyu and Kim, Chang Hae and Park, Seung Hyok and Park, Hee Dong and Choi, Se Young},
+  journal={Applied Physics Letters},
+  year={2004},
+  publisher={AIP}
+}
+
+@article{ledprin2,
+  title={White-light emission from near UV InGaN-GaN LED chip precoated with blue/green/red phosphors},
+  author={Sheu, Jinn-Kong and Chang, Shoou-Jinn and Kuo, CH and Su, Yan-Kuin and Wu, LW and Lin, YC and Lai, WC and Tsai, JM and Chi, Gou-Chung and Wu, RK},
+  journal={Photonics Technology Letters, IEEE},
+  year={2003},
+  publisher={IEEE}
+}
+
+@inproceedings{iso1,
+  title={Implementation details of a multi purpose ISO 14443 RFID-tool},
+  author={Carluccio, Dario and Kasper, Timo and Paar, Christof},
+  booktitle={Workshop on RFID Security},
+  year={2006}
+}
+
+@article{iso2,
+  title={Pervasive computing goes the last hundred feet with RFID systems},
+  author={Stanford, Vince},
+  journal={Pervasive Computing, IEEE},
+  year={2003}
+}
+
+@misc{dimming,
+  title={LED dimming control technique for increasing the maximum PWM dimming ratio and avoiding LED flicker},
+  author={Marosek, Mark W},
+  year={2008},
+  month=jan # "~22",
+  publisher={Google Patents},
+  note={US Patent 7,321,203}
+}
+
+@article{rfidharm,
+  title={The roots, rules, and rise of RFID},
+  author={Heidrich, Juergen and Brenk, Daniel and Essel, Jochen and Schwarzer, Stefan and Seemann, Kay and Fischer, Georg and Weigel, Robert},
+  journal={Microwave Magazine, IEEE},
+  year={2010}
+}
+
+@book{lightwave,
+  title={Principles of optics: electromagnetic theory of propagation, interference and diffraction of light},
+  author={Born, Max and Wolf, Emil},
+  year={1999},
+  publisher={CUP Archive}
+}
+
+

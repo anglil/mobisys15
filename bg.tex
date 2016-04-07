@@ -1,0 +1,120 @@
+\section{Preliminaries}
+\label{sec:background}
+
+\begin{figure}[tb]
+\minipage{0.48\columnwidth}
+    \subfigure[Corner Cube Illustration]{
+        \includegraphics[width=\columnwidth]{fig/corner_cube.pdf} 
+        \label{fig:cornercube}
+    } \hfill
+\endminipage \hfill
+\minipage{0.45\columnwidth}
+%    \subfigure[Bicycle Retro-reflector]{
+        \includegraphics[width=0.8\columnwidth]{fig/tx90-rx90.JPG} (b) \\
+        \includegraphics[width=0.8\columnwidth]{fig/tx45-rx90.JPG} (c) \\
+        \includegraphics[width=0.8\columnwidth]{fig/tx45-rx45.JPG} (d)
+%    } 
+\endminipage \hfill
+%\minipage{0.9\columnwidth}
+%%    \subfigure[Corner Cube Illustration]{
+%        \includegraphics[width=\columnwidth]{fig/retro-reflector-cmp.pdf} (e) Reflection properties of a paper, mirror and retro-reflector
+%        \label{fig:retro-reflector-cmp}
+%%    }
+%\endminipage
+%\vspace{1ex}
+    \caption{Illustration of the reflection principle of a retro-reflector (a), and the comparison of the reflection property (b)-(d). The flash and camera are at positions of ($90\degree$, $90\degree$), ($45\degree$, $90\degree$) and ($45\degree$, $45\degree$) in (b), (c), and (d), respectively. The three side-by-side put testing materials are, from left to right, white paper, mirror and retro-reflector fabric. %(e) draws the reflection principle of a white paper, a mirror and a retro-reflector, respectively 
+    }\label{fig:retro-reflector}
+\end{figure}
+
+
+
+%\subsection{Requirements}
+
+Our goal is to establish a bi-directional communication link using visible lights. As the dual-paradigm nature of VLC over the lighting infrastructure entails that the primary function is illumination and the primary usage scenario is communicating with low power mobile devices or sensor nodes, we have the following two basic requirements behind the goal. 
+\begin{Itemize}
+\item \paragraph{Efficiency Requirement}
+%\noindent\emph{\textbf{Efficiency Requirement:}} 
+Establish a low-power, duplex visible light communication link with a battery-free mobile end that harvests light energy from the illumination LED. 
+\item \paragraph{Practicality Requirement}
+%\noindent\emph{\textbf{Practicality Requirement:}} 
+Impose no constraints on actual use. This implies a practical working range in normal indoor situations, flexible tag orientation, and that the size of the device be small.
+\end{Itemize}
+
+To achieve a duplex link on visible light, one possibility is to employ a symmetric design, that is, using an LED on the mobile device or sensor node to actively emit signals, and pick up the signals with a light sensor on the illuminating LED. Unfortunately, reaching a practical working distance (with the light typically installed on the ceiling) costs prohibitively high energy on the mobile or sensor device. The light energy attenuates quickly as the propagation proceeds~\cite{lightwave}.
+
+One way to extend the communication range is to use directional signals, ideally a laser, or using intermediate light concentrating optical components (\eg lenses).
+However, that would require careful alignment between the light source and the mobile device, which may further require steerable optical components and  precise tag positioning. Thus, it is not quite applicable. 
+
+
+Another possible way towards more affordable power is to leverage the light from the illuminating infrastructure, which is usually of high power. This is similar to the design of passive RFID systems where a tag communicates with a reader by reflecting the incoming radio signal. For instance, reflecting the light using a \textit{mirror} to a light sensor that sits beside the LED uses this principle. However, use of a mirror would then require carefully orienting the mobile device, thus violating the practicality requirement. Inspired by free space laser communication systems~\cite{mrr}, we use a retro-reflector to meet both requirements. Below we introduce the retro-reflector and present some favorable properties about retro-reflector materials. 
+
+
+
+%\subsection{Preliminaries}
+\paragraph{Retro-reflector} 
+A retro-reflector is a device or surface that, unlike mirrors, reflects light back to its source along the same incoming direction with little scattering~\cite{rr}. 
+A retro-reflector can be produced using spherical lens, much like the mechanism of a cat's eye. A more feasible way to obtain retro-reflection is to use a corner reflector, which consists of a set of corner cubes each with three mutually perpendicular reflective surfaces. The principle of such a retro-reflector is shown in \figref{fig:cornercube}. A large yet relatively thin retro-reflector is possible by combining many small corner reflectors, using the standard triangular tiling. 
+Cheap retro-reflector fabric are readily available, \eg the Scotchlite series from 3M~\cite{rrsheet}, and are widely used on road signs, bicycles, and clothing for traffic safety at night. %\fyi{\figref{fig:bike-cc} shows a flattened retro-reflector seen on bicycles.} \todo{May merge Fig 1 and 2, by removing the current fig 2(d).}
+
+
+%\vspace{-1em}
+
+We conduct experiments to measure the reflecting properties of a retro-reflector fabric (Scotchlite 9910 from 3M). We compare it against a plain white paper which features diffusing reflection and a planar mirror that does mirror reflection. We place the three materials side by side and let the light source (a flash light) emit light at different angles while in the same distance from the materials. We capture the reflection effects with a camera from multiple angles. \figref{fig:retro-reflector}(b)-(d) shows the resulting images from experiments conducted in a dark chamber. In the figures, we can see that the retro-reflector fabric is bright as long as the light source and the camera are along the same direction, be it $45\degree$ or $90\degree$, whereas the mirror is bright only when both the camera and the flash are at $90\degree$. In the case of \figref{fig:retro-reflector}(c), the images of the mirror and the retro-reflector are dark. On the contrary, the white paper is always slightly turned on  because of its diffusion, despite the flash and camera positions.  
+%\todo{(a) When the LED is at $90\degree$, and the camera is at $90\degree$, both the retro-reflector and mirror areas are bright. (b) When the LED is at $45\degree$, and the camera is at $90\degree$, the retro-reflector and the mirror areas are dark, while the paper area is slightly bright due to diffused reflections. (c) When the LED (TX) is at $45\degree$ arrival of incidence, and the camera (RX) is at $45\degree$, the retro-reflector area (on the right) is bright, the mirror area (in the middle) is dark, and the paper area (on the left) is dark.} 
+We notice that the brightness of the retro-reflector fabric tends to be weaker than that of the mirror but more uniform. This is because the fabric we used is not a perfect retro-reflector and has small dispersion \cite{rrsheet}. %\fyi{Further measurements show that such dispersion is severed when the incidence angle is over $\pm20\degree$, as shown in \figref{fig:rr-angle}.}
+
+%\paragraph{Modulating Retro-reflector}
+%Modulating retro-reflector (MRR)~\cite{mrr} consists of a retro-reflector and a modulator for optical communications. An MRR operates as a passive sources which transmits bits by varying the intensity of the reflected light beam. MRR is widely used in free space communication where the other side is a laser. Existing MRR systems~\cite{expensive,expensive2} is usually of a large size, and modulation is commonly achieved with a high-end electroabsorption modulator altering the absorption spectrum by applying an electric field. Consequently, such setting is ill-suited for our scenarios which require a low-cost solution.
+
+The ability to bounce back light from any incidence angle leads to a favorable property of the retro-reflector: when the light source emits omni-directional lights, the retro-reflector will concentrate the lights as it reflects them. This is illustrated in \figref{fig:retro1}. From experiments, we empirically found that the concentrated energy is directly proportional to the size of the retro-reflector fabric, as shown in \figref{fig:retro2}. %This property enables us to achieve higher reflected signal strength by using larger retro-reflector.
+\begin{figure}[!th]
+  \begin{center}
+      \subfigure[Energy Concentration]{
+        \includegraphics[width=0.46\columnwidth]{retro-reflector.pdf}\label{fig:retro1}
+      } 
+      \hfill
+      \subfigure[Reflected Energy vs. Area]{
+        \includegraphics[width=0.46\columnwidth]{fig/fig3b.eps}\label{fig:retro2}
+	  }
+\vspace{-1em}
+      \caption{Energy concentrating property of a retro-reflector when the light source emits omni-directional lights and the relationship between reflected energy and the retro-reflector size. }\label{fig:retro}
+  \end{center}
+%  \vspace{-0.3in}
+\end{figure}
+
+
+%\paragraph{Liquid Crystal Display (LCD)}
+\paragraph{Modulating with LCD}
+In terms of embedding information bits on the reflected light, special retro-reflector can alter the amplitude by electronically controlling the reflection or absorption using, for example, MEMS technologies \cite{expensive,expensive2}. However, we hope to use ordinary, off-the-shelf retro-reflector fabrics. In order to modulate the lights reflected by such fabric, we resort to a liquid crystal display that can pass or block light under the control of the electrical field. 
+
+
+\begin{figure}[th]
+  \begin{center}
+      \subfigure[LCD Principle \cite{eavesdrop2}]{
+%        \includegraphics[width=0.5\columnwidth]{LCD_principle2.pdf}\label{fig:lcdworks}
+         \includegraphics[width=0.5\columnwidth]{lcdworks-crop.png}\label{fig:lcdworks}
+      } 
+      \hfill
+      \subfigure[LCD Driver]{
+        \includegraphics[width=0.44\columnwidth]{../illustrations/conventional_LCD_driver.eps}\label{fig:lcd-circuits}
+	  }
+\vspace{-1.5em}
+      \caption{The structure and principle of LCD, and its typical driving circuits. }\label{fig:lcd}
+  \end{center}
+%  \vspace{-1em}
+\end{figure}
+
+An LCD has a multi-layer sandwich structure. At the two ends of the LCD panel are two polarizer films; the two polarizers can be parallel or perpendicular to each other. In the middle are two glass electrodes that encompass a layer of nematic phase liquid crystals, as shown in \figref{fig:lcdworks}. 
+An LCD works as follows: when the incoming light passes through the first polarizer, it becomes polarized. Depending on the actual liquid crystal state, the polarity of the light will be changed or remain unchanged. 
+In the natural state, liquid crystal molecules are twisted. It will change the polarity of the light passing through it. If an electric field is imposed (by the two surrounding glass electrodes) on the liquid crystal, its molecules will become untwisted. The polarity of the light will not be affected when passing through. The light will finally pass or be blocked by the second polarizer on the other end, depending the conformance of their polarity \cite{eavesdrop2}. %http://qxwujoey.tripod.com/lcd.htm} 
+%The reason we see the coloured images are due to the colour filter, light passes through the filtered cells creates the colors. There is also a colour filter containing the 3 primary colours (red, green and blue). 
+
+\figref{fig:lcd-circuits} shows a typical driving circuit for charging or discharging an LCD. We use it to toggle on/off the LCD shutter.
+At a high level, the polarization changes with the voltage added on it: with a low voltage, the incoming light traverses the LCD and hits the retro-reflector, and the reflected light also traverses the LCD; with a high voltage, the incoming light is rejected by the LCD. 
+
+
+%\p{Charging and discharging circuitry, as we will use them in the energy reuse. }
+%The LCD usually consumes a little amount of current, but requires a relatively high voltage. For example, the LCD we used would start to take effect at 2.0V, and the desired working voltage is as high as 10V. In practice, we found a voltage of 6.0V will work. \todo{Explain the circuits, especially the charging/discharging paths.} We notice that the LCD itself is capacitor. \todo{need to further explain it's consequence. Postpone to the energy reuse section.}
+
+
+%However, one disadvantage of LCDs are their low refresh rate, e.g., 60 or 75 Hz, which is too low for data communication. Fortunately, we find \textit{LCD shutters} with much higher refresh rate (up to 1KHz \hl{cite}). Fig.~\ref{fig:retrolcd} shows the basic principle of a retro-reflector with an LCD coverage.

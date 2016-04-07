@@ -1,0 +1,167 @@
+\usepackage[english]{babel}
+%% PACKAGE %%
+%\usepackage{caption}
+%\usepackage{floatrow}
+% Table float box with bottom caption, box width adjusted to content
+%\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+\usepackage{blindtext}
+\usepackage[bookmarks, colorlinks=false, plainpages = false]{hyperref}
+
+
+%\usepackage{sectsty}
+\usepackage{graphicx}
+%\epstopdfsetup{outdir=./fig/}
+\graphicspath{{./fig/}}
+\DeclareGraphicsExtensions{.pdf,.mps,.png,.jpg,.eps,.PNG,.JPG}
+
+%\usepackage{times}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{subfigure}
+\usepackage{url}
+\def\UrlBreaks{\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z\do\[\do\\\do\]\do\^\do\_\do\`\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]\do\)\do\,\do\?\do\'\do+\do\=\do\#}%
+\usepackage{color}
+%\usepackage{tcolorbox}
+
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\usepackage{fmtcount}
+\usepackage{times}
+\usepackage{cite}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{balance}
+\usepackage{verbatim}
+\usepackage{appendix}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx,array}
+%\usepackage{bbding}
+\usepackage{soul} % for using hl{}
+\usepackage{xspace}
+\usepackage{gensymb}
+
+\usepackage{cite}%
+\usepackage{balance}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newcommand{\order}[1]{\ensuremath{\mathcal{O}(#1)}}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
+
+\newenvironment{Itemize}%
+{\begin{itemize}%
+\setlength{\itemsep}{0pt}%
+\setlength{\topsep}{0pt}%
+\setlength{\partopsep}{0pt}%
+\setlength{\parskip}{0pt}}%
+{\end{itemize}}
+\setlength{\leftmargini}{0pt}%
+
+\newenvironment{Enumerate}%
+{\begin{enumerate}%
+\setlength{\itemsep}{0pt}%
+\setlength{\topsep}{0pt}%
+\setlength{\partopsep}{0pt}%
+\setlength{\parskip}{0pt}}%
+{\end{enumerate}}
+\setlength{\leftmargini}{1.25em}%
+
+% section styles - ACM bastards
+%\makeatletter
+
+%\global\def\section{\@startsection {section}{1}{\z@}%
+%                                   {2ex \@plus 1ex \@minus .1ex}%
+%                                   {1ex \@plus.2ex}%
+%                                   {\normalfont\bfseries\fontsize{12}{14}\selectfont}}
+%\global\def\subsection{\@startsection{subsection}{2}{\z@}%
+%                                     {2ex\@plus 1ex \@minus .1ex}%
+%                                     {1ex \@plus .2ex}%
+%                                     {\normalfont\bfseries\fontsize{11}{13}\selectfont}}
+%%\global\def\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+%%                                     {2ex\@plus 1ex \@minus .1ex}%
+%%                                     {1ex \@plus .2ex}%
+%%                                     {\normalfont\itshape\fontsize{10}{12}\selectfont}}
+
+
+%\newif\ifdebugdoc\debugdocfalse
+\newif\ifdebugdoc\debugdoctrue
+\ifdebugdoc
+%% Writing Mode
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{Todo:} #1}}
+\newcommand{\fyi}[1]{\textcolor{blue}{#1}} %%content will be included
+\newcommand{\fye}[1]{\textcolor{red}{#1}}  %%content will be excluded
+\newcommand{\remind}[1]{\footnote{\textit{\textcolor{red}{\textbf{Remind:} #1}}}}
+\newcommand{\repl}[2]{\textcolor{red}{#1}\textcolor{blue}{\sout{#2}}}
+\newcommand{\add}[1]{\textcolor{red}{#1}}
+\newcommand{\del}[1]{\textcolor{blue}{\sout{#1}}}
+%\newcommand{\p}[1]{\noindent\parbox{\columnwidth}{\textcolor{magenta}{\textbf{Point to make:} #1}}\vskip 0.5ex}
+\newcommand{\p}[1]{\vskip 1ex \noindent\colorbox{yellow}{\parbox{\columnwidth}{#1}}\vskip 4pt}
+
+\newcommand{\note}[1]{\vskip 4ex \noindent\colorbox{yellow}{\parbox{\columnwidth}{#1}}\vskip 6ex}
+\newcommand{\qm}[1]{\textcolor{red}{\uwave{#1}}}
+\newcommand{\q}[1]{\vskip 1ex \noindent\colorbox{magenta}{\parbox{\columnwidth}{\textbf{Question:} #1}}\vskip 4pt}
+\newcommand{\qa}[1]{\noindent\colorbox{yellow}{\parbox{\columnwidth}{\textbf{Answer:} #1}}\vskip 2ex}
+
+\else
+%%Submission Mode
+\newcommand{\todo}[1]{}
+\newcommand{\fyi}[1]{#1}
+\newcommand{\fye}[1]{}
+\newcommand{\remind}[1]{}
+\newcommand{\repl}[2]{#1}
+\newcommand{\add}[1]{#1}
+\newcommand{\del}[1]{}
+\newcommand{\p}[1]{}
+
+\newcommand{\note}[1]{}
+\newcommand{\qm}[1]{#1}
+\newcommand{\q}[1]{}
+\newcommand{\qa}[1]{}
+
+\fi
+
+
+\def\ie{\textit{i.e.}\xspace}
+\def\etal{\textit{et al.}\xspace}
+\def\etc{\textit{etc.}\xspace}
+\def\eg{\textit{e.g.}\xspace}
+\def\wrt{\textit{w.r.t.}\xspace}
+\def\degree{{\,^{\circ}}\xspace}
+
+\def\name{\textsc{Retro-VLC}\xspace}
+\def\vitag{ViTag\xspace}
+\def\reader{ViReader\xspace}
+\def\retro{Retro-VLC\xspace}
+\def\readertx{ViReader-Tx\xspace}
+\def\readerrx{ViReader-Rx\xspace}
+\def\tagtx{ViTag-Tx\xspace}
+\def\tagrx{ViTag-Rx\xspace}
+%\newcommand{\vitag} {ViTag\ }
+%%\newcommand{\tag} {ViTag\ }
+%\newcommand{\reader} {ViReader\ }
+%\newcommand{\retro} {Retro-VLC\ }
+%\newcommand{\readertx} {ViReader-Tx\ }
+%\newcommand{\readerrx} {ViReader-Rx\ }
+%\newcommand{\tagtx} {ViTag-Tx\ }
+%\newcommand{\tagrx} {ViTag-Rx\ }
+
+\newcommand{\xref}[1]{\S\ref{#1}}
+\newcommand{\pxref}[1]{(\S\ref{#1})}
+%\newcommand{\algref}[1]{Algorithm~\ref{#1}}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\para}[1]{\vskip 0.06in\noindent {\bf #1: } }
+\renewcommand{\paragraph}[1]{\vspace{4pt}\noindent\textbf{#1: }}
+
+
+
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}

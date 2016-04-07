@@ -1,0 +1,195 @@
+\begin{thebibliography}{10}
+
+\bibitem{rrsheet}
+{3M Retro-reflector}.
+\newblock \url{http://qxwujoey.tripod.com/lcd.htm}.
+
+\bibitem{ble0}
+{ByteLight}.
+\newblock \url{http://www.bytelight.com/}.
+
+\bibitem{mrr}
+{Modulating Retro-reflector}.
+\newblock \url{http://en.wikipedia.org/wiki/Modulating_retro-reflector}.
+
+\bibitem{rr}
+{Retro-reflector Principle}.
+\newblock \url{http://en.wikipedia.org/wiki/Retroreflector}.
+
+\bibitem{fullduplex1}
+D.~Bharadia and S.~Katti.
+\newblock Full duplex mimo radios.
+\newblock {\em Self}, 1(A2):A3, 2014.
+
+\bibitem{lightwave}
+M.~Born and E.~Wolf.
+\newblock {\em Principles of optics: electromagnetic theory of propagation,
+  interference and diffraction of light}.
+\newblock CUP Archive, 1999.
+
+\bibitem{retro1}
+T.~K. Chan and J.~E. Ford.
+\newblock Retroreflecting optical modulator using an mems deformable
+  micromirror array.
+\newblock {\em Journal of lightwave technology}, 2006.
+
+\bibitem{fullduplex3}
+J.~I. Choi, M.~Jain, K.~Srinivasan, P.~Levis, and S.~Katti.
+\newblock Achieving single channel, full duplex wireless communication.
+\newblock In {\em MobiCom'10}.
+
+\bibitem{led2led2}
+C.~Chow, C.~Yeh, Y.~Liu, and Y.~Liu.
+\newblock Improved modulation speed of led visible light communication system
+  integrated to main electricity network.
+\newblock {\em Electronics letters}, 2011.
+
+\bibitem{flawedsys3}
+K.~Cui, G.~Chen, Z.~Xu, and R.~D. Roberts.
+\newblock Line-of-sight visible light communication system design and
+  demonstration.
+\newblock In {\em CSNDSP'10}, 2010.
+
+\bibitem{rfidsec2}
+A.~Czeskis, K.~Koscher, J.~R. Smith, and T.~Kohno.
+\newblock Rfids and secret handshakes: Defending against ghost-and-leech
+  attacks and unauthorized reads with context-aware communications.
+\newblock In {\em CCS'08}.
+
+\bibitem{fullduplex2}
+M.~Duarte and A.~Sabharwal.
+\newblock Full-duplex wireless communications using off-the-shelf radios:
+  Feasibility and first results.
+\newblock In {\em ASILOMAR'10}.
+
+\bibitem{led2led1}
+D.~Giustiniano, N.~O. Tippenhauer, and S.~Mangold.
+\newblock Low-complexity visible light networking with led-to-led
+  communication.
+\newblock In {\em Wireless Days, 2012 IFIP}, 2012.
+
+\bibitem{abc4}
+P.~Hu, P.~Zhang, and D.~Ganesan.
+\newblock Leveraging interleaved signal edges for concurrent backscatter.
+\newblock 2014.
+
+\bibitem{rfid1}
+S.~Jeon, Y.~Yu, and J.~Choi.
+\newblock Dual-band slot-coupled dipole antenna for 900 mhz and 2.45 ghz rfid
+  tag application.
+\newblock {\em Electronics letters}, 2006.
+
+\bibitem{abc3}
+B.~Kellogg, A.~Parks, S.~Gollakota, J.~R. Smith, and D.~Wetherall.
+\newblock Wi-fi backscatter: internet connectivity for rf-powered devices.
+\newblock In {\em SIGCOMM'14}.
+
+\bibitem{flawedsys1}
+T.~Komine and M.~Nakagawa.
+\newblock Integrated system of white led visible-light communication and
+  power-line communication.
+\newblock {\em Consumer Electronics, IEEE Transactions on}, 2003.
+
+\bibitem{rfidsec1}
+K.~Koscher, A.~Juels, V.~Brajkovic, and T.~Kohno.
+\newblock Epc rfid tag security weaknesses and defenses: passport cards,
+  enhanced drivers licenses, and beyond.
+\newblock In {\em CCS'09}.
+
+\bibitem{location1}
+Y.-S. Kuo, P.~Pannuto, K.-J. Hsiao, and P.~Dutta.
+\newblock Luxapose: Indoor positioning with mobile phones and visible light.
+\newblock {\em MobiCom'14}.
+
+\bibitem{flawedsys2}
+H.~Le~Minh, D.~O'Brien, G.~Faulkner, L.~Zeng, K.~Lee, D.~Jung, Y.~Oh, and E.~T.
+  Won.
+\newblock 100-mb/s nrz visible light communications using a postequalized white
+  led.
+\newblock {\em Photonics Technology Letters, IEEE}, 2009.
+
+\bibitem{led2led3}
+H.~Li, Y.~Liu, T.~Xing, Y.~Wang, J.~Uribe, H.~Baghaei, S.~Xie, S.~Kim,
+  R.~Ramirez, and W.-H. Wong.
+\newblock An instantaneous photomultiplier gain calibration method for pet or
+  gamma camera detectors using an led network.
+\newblock In {\em Nuclear Science Symposium Conference Record}. IEEE, 2003.
+
+\bibitem{location3}
+L.~Li, P.~Hu, C.~Peng, G.~Shen, and F.~Zhao.
+\newblock Epsilon: a visible light based positioning system.
+\newblock In {\em NSDI'14}.
+
+\bibitem{abc2}
+V.~Liu, A.~Parks, V.~Talla, S.~Gollakota, D.~Wetherall, and J.~R. Smith.
+\newblock Ambient backscatter: wireless communication out of thin air.
+\newblock In {\em SIGCOMM'13}.
+
+\bibitem{retro2}
+D.~N. Mansell, P.~S. Durkin, G.~N. Whitfield, and D.~W. Morley.
+\newblock Modulated-retroreflector based optical identification system, 2002.
+\newblock US Patent 6,493,123.
+
+\bibitem{eavesdrop1}
+R.~Nandakumar, K.~K. Chintalapudi, V.~Padmanabhan, and R.~Venkatesan.
+\newblock Dhwani: secure peer-to-peer acoustic nfc.
+\newblock In {\em SIGCOMM'13}.
+
+\bibitem{backscatterdeclay}
+P.~V. Nikitin and K.~S. Rao.
+\newblock Theory and measurement of backscattering from rfid tags.
+\newblock {\em Antennas and Propagation Magazine, IEEE}, 48(6):212--218, 2006.
+
+\bibitem{abc1}
+A.~N. Parks, A.~Liu, S.~Gollakota, and J.~R. Smith.
+\newblock Turbocharging ambient backscatter communication.
+\newblock In {\em SIGCOMM'14}.
+
+\bibitem{expensive2}
+W.~S. Rabinovich, G.~C. Gilbreath, P.~G. Goetz, R.~Mahon, D.~S. Katzer,
+  K.~Ikossi-Anastasiou, S.~C. Binari, T.~J. Meehan, M.~Ferraro, I.~Sokolsky,
+  et~al.
+\newblock Ingaas multiple quantum well modulating retro-reflector for
+  free-space optical communications.
+\newblock In {\em International Symposium on Optical Science and Technology}.
+  International Society for Optics and Photonics, 2002.
+
+\bibitem{expensive}
+W.~S. Rabinovich, R.~Mahon, P.~Goetz, E.~Waluschka, D.~Katzer, S.~Binari, and
+  G.~Gilbreath.
+\newblock A cat's eye multiple quantum well modulating retro-reflector.
+\newblock Technical report, DTIC Document, 2006.
+
+\bibitem{location2}
+N.~Rajagopal, P.~Lazik, and A.~Rowe.
+\newblock Visual light landmarks for mobile devices.
+\newblock In {\em IPSN'14}.
+
+\bibitem{led2led4}
+S.~Schmid, G.~Corbellini, S.~Mangold, and T.~R. Gross.
+\newblock Led-to-led visible light communication networks.
+\newblock In {\em MobiHoc'13}.
+
+\bibitem{rfid2}
+L.~Ukkonen, M.~Schaffrath, D.~W. Engels, L.~Sydanheimo, and M.~Kivikoski.
+\newblock Operability of folded microstrip patch-type tag antenna in the uhf
+  rfid bands within 865-928 mhz.
+\newblock {\em Antennas and Wireless Propagation Letters, IEEE}, 2006.
+
+\bibitem{flawedsys4}
+J.~Vu{\v{c}}i{\'c}, C.~Kottke, S.~Nerreter, K.-D. Langer, and J.~W. Walewski.
+\newblock 513 mbit/s visible light communications link based on dmt-modulation
+  of a white led.
+\newblock {\em Journal of Lightwave Technology}, 2010.
+
+\bibitem{led2led5}
+Q.~Wang, D.~Giustiniano, and D.~Puccinelli.
+\newblock Openvlc: software-defined visible light embedded networks.
+\newblock In {\em VLCS'14}.
+
+\bibitem{eavesdrop2}
+R.~Zhou and G.~Xing.
+\newblock nshield: a noninvasive nfc security system for mobiledevices.
+\newblock In {\em MobiSys'14}.
+
+\end{thebibliography}

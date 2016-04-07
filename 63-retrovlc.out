@@ -1,0 +1,24 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Related Work}{}% 2
+\BOOKMARK [1][-]{section.3}{Preliminaries}{}% 3
+\BOOKMARK [1][-]{section.4}{Retro-VLC Overview}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Challenges}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Principles}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Design Overview}{section.4}% 7
+\BOOKMARK [1][-]{section.5}{Retro-VLC System Design}{}% 8
+\BOOKMARK [2][-]{subsection.5.1}{ViReader-Tx Design}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.2}{ViReader-Rx Design}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.3}{ViTag-Rx Design}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.4}{ViTag-Tx Design}{section.5}% 12
+\BOOKMARK [1][-]{section.6}{Prototyping and Potential Applications}{}% 13
+\BOOKMARK [2][-]{subsection.6.1}{Prototype Implementation}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.2}{Potential Applications}{section.6}% 15
+\BOOKMARK [1][-]{section.7}{Evaluation}{}% 16
+\BOOKMARK [2][-]{subsection.7.1}{Packet Loss Rate}{section.7}% 17
+\BOOKMARK [2][-]{subsection.7.2}{Response Time}{section.7}% 18
+\BOOKMARK [2][-]{subsection.7.3}{Channel Response}{section.7}% 19
+\BOOKMARK [2][-]{subsection.7.4}{Maximum Working Range}{section.7}% 20
+\BOOKMARK [2][-]{subsection.7.5}{Eavesdropping Range}{section.7}% 21
+\BOOKMARK [1][-]{section.8}{Discussions}{}% 22
+\BOOKMARK [1][-]{section.9}{conclusion}{}% 23
+\BOOKMARK [1][-]{section.10}{References}{}% 24

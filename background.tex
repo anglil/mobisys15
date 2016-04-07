@@ -1,0 +1,49 @@
+\section{Preliminaries}
+\label{sec:background}
+
+\begin{figure*}[!t]
+\vskip -0.1in
+\centering
+{\footnotesize
+\begin{tabular}{cccc}
+\epsfig{file=../illustrations/mrr1.eps, width=0.5\columnwidth} &
+\epsfig{file=../illustrations/mrr2.eps, width=0.5\columnwidth} & 
+\epsfig{file=../illustrations/mrr3.eps, width=0.5\columnwidth} & 
+\epsfig{file=../illustrations/mrr4.eps, width=0.5\columnwidth} \\
+{(a) Same Direction} & {(b) Different Directions} & {(c) With LCD on} & {(d) Retro-reflector Principle}\\
+\end{tabular}
+}
+\vskip -0.1in
+\caption{\footnotesize{\bf Illustration of the Retro-reflector.} Blah Blah.}
+\label{fig:retrolcd}
+\vspace{-1em}
+\end{figure*}
+
+
+
+In this section, we introduce a few concepts which are used throughout the paper. 
+
+%In principle, \vitag\ is a general technique that can leverage visible light signals to do full-stack secure communications between an array of powered sources and battery-free backscatter devices. In this paper, we demonstrate this feasibility with an RFID-based application, and show that it is better than the existing RFID technology in several critical aspects. 
+
+\paragraph{Visible Light Communication} 
+Visible lights are electromagnetic waves that span frequencies roughly from $400$ to $800 THz$. Commonly, white LEDs are used for illumination. The instantaneous On/Off feature turns LEDs into effective transmitters for visible light communication (VLC). Specifically, information bits can be embedded on the light by modulating the on/off state of the LED with on-off keying (OOK) or variable pulse-position modulation (VPPM) \cite{standard}. To receive such signals, while in some cases a cell phone camera or a digital camera will be sufficient \hl{need citations, ipsn14 and mobicom14}, photodiodes are generally used, because phone cameras can only achieve around 0.25MHz sampling rate~\cite{camera1} (in other words, low data rate), whereas photodiodes have generally higher bandwidth up to 0.5GHz~\cite{pdsheet}. Moreover, compared with a phone camera, the SNR of the photodiode is orders of magnitude higher at the same distance \hl{ipsn14}. 
+
+%A typical way to generate white lights is to use a phosphor material to convert monochromatic lights from blue or ultraviolet to broad-band white lights, where the color of the monochromatic light depends on the band gap energy of the materials forming the p-n junction in the LED. 
+
+%Visible lights bring safety advantages over communication waves of other common frequencies, because human eyes are much more sensitive to the strength of visible lights than the invisible TV, Wi-FI and RFID transmissions. With the LED dimming support~\cite{dimming}, a person can turn down the light if she feels of a too high brightness. In addition, radios waves at some certain frequencies are likely to hard human organs, especially to pregnant women and kids~\cite{rfidharm}, while the visible light are not.
+
+%There are two primary ways of producing white LEDs. One is to use individual LEDs that emit three primary colors --- red, green, and blue --- and then mix all the colors to form white light~\cite{ledprin1}. The other is to use a phosphor material to convert monochromatic light from a blue or UV LED to broad-spectrum white light, much in the same way a fluorescent light bulb works~\cite{ledprin2}. In general, the wavelength of the light emitted, and thus its color, depends on the band gap energy of the materials forming the p-n junction. In materials used for LEDs, the electrons and holes recombine by a radiative transition, which produces optical emission, because there are direct band gap with energies corresponding to near-infrared, visible, or near-ultraviolet light. 
+
+
+
+\paragraph{Retro-reflector} 
+Retro-reflector is a device or surface that operate by returning light back to the light source along the same light direction with a minimum of scattering \hl{cite the wikipage}. Retro-reflectors are widely used on road signs, bicycles, and clothing for road safety. From a microscopic view, a retro-reflector is composed of cells, each of which is a corner cube as shown in \hl{Fig.xx}. When a light beam hits one of the cells, the light is turned around via two adjacent reflections. 
+
+Modulating retro-reflector (MRR) \hl{cite the wikipage} is a system typically consisting of a retro-reflector and a modulator for optical communications. The MRR operates as a passive sources which transmits bits by varying the intensity of the reflected light beam. MRR is widely used in free space communication where the other side is a laser. Existing MRR \hl{cite some papers} is usually with large size, and modulation is commonly achieved with a high-end electroabsorption modulator altering the absorption spectrum by applying an electric field. Consequently, such setting is ill-suited for our scenarios which require a low-cost solution.
+
+\p{Need double check. It is really hard to understand the existing MRR solutions. Cannot find much material.}
+
+ 
+\paragraph{Liquid-crystal display (LCD)}
+LCD is a type of display widely used in portable devices like digital watches and phones. LCDs do not emit light directly; Rather, they use the light properties of liquid crystals that are controlled by the voltage added on them. When the LCD is on, the incoming light is able to pass the LCD and hit the retro-reflector; When the LCD is off, the incoming light is rejected by the LCD. Therefore, LCDs can be used as modulators for MRRs. However, one disadvantage of LCDs are their low refresh rate, e.g., 60 or 75 Hz, which is too low for data communication. Fortunately, we find \textit{LCD shutters} with much higher refresh rate (up to 1KHz \hl{cite}). Fig.~\ref{fig:retrolcd} shows the basic principle of a retro-reflector with an LCD coverage.
+

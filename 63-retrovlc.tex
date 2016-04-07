@@ -1,0 +1,114 @@
+\documentclass {sig-alternate-10pt}
+%\documentclass[letterpaper,twocolumn,10pt]{article}
+%\documentclass{sig-alternate-10pt}
+%\usepackage{usenix-2}
+
+\input{preamble}
+
+%\hyphenation{infra-struc-ture}
+%\epstopdfsetup{outdir=./}
+%\renewcommand{\baselinestretch}{0.96}
+
+\begin{document}
+
+\title{\retro: Enabling Low-power Duplex Visible Light Communication}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+
+\numberofauthors{6} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Angli Liu%\titlenote{This work was conducted when Angli Liu interned with Microsoft Research Asia(MSRA)}
+\\
+       \affaddr{University of Washington}\\
+       \email{anglil@cs.washington.edu}
+\alignauthor
+Jiangtao Li\\
+       \affaddr{Microsoft Research, Beijing}\\
+       \email{jangtao.li@gmail.com}
+% 3rd. author
+\alignauthor Guobin Shen\\
+       \affaddr{Microsoft Research, Beijing}\\
+       \email{jacky.shen@microsoft.com}
+\and  % use '\and' if you need 'another row' of author names
+% 4th. author
+\alignauthor Chao Sun\\
+       \affaddr{Microsoft Research, Beijing}\\
+       \email{v-csun@microsoft.com}
+% 5th. author
+\alignauthor Liqun Li\\
+       \affaddr{Microsoft Research, Beijing}\\
+       \email{liqul@microsoft.com}
+% 6th. author
+\alignauthor Feng Zhao\\
+       \affaddr{Microsoft Research, Beijing}\\
+       \email{zhao@microsoft.com}
+}
+
+
+\date{25 November 2014}
+
+\maketitle
+%\pagestyle{empty}
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+% A category with the (minimum) three required fields
+%\category{C.2.1}{Network Architecture and Design}{Wireless communication}
+%A category including the fourth, optional field follows...
+%\category{B.4.1}{Data Communications Devices}{Transmitters and Receivers}
+
+%\terms{Design, Experimentation, Security}
+
+%\keywords{Visible Light Communication, Internet of Things, Retro-reflector, RFID} % NOT required for Proceedings
+%
+% section by section tex files
+%
+\input{intro}
+\input{related}
+\input{bg}
+\input{ov}
+%\input{principle_2}
+\input{design}
+%\input{vitag_2}
+%\input{network}
+\input{implementation}
+\input{evaluation}
+\input{discussion}
+\input{conclusion}
+%\begin{appendix}
+\input{appendix}
+%\end{appendix}
+
+\small
+%\balance
+\bibliographystyle{abbrv}
+\bibliography{ourbib}
+
+
+
+\end{document}

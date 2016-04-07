@@ -1,0 +1,47 @@
+\section*{Appendix}
+\label{sec:app}
+\noindent{\bf Proof of Lemma~\ref{lem:lemma1}} 
+%Assume the estimated end of the preamble (the beginning of the payload) is $\hat{t_0}$, and the actual beginning of the payload is $t_0$. 
+Assume the first estimated preamble bit is at $\hat{t_0}$, and its actual time $t_0$. 
+Denote $s[n]$ as the central time of a three bit sequence on \readerrx, and $t[n]$ as the central time of a three bit sequence on \tagtx, where $t[n+1]-t[n]$ is the time period of one bit ($n:0, 1, ..., +\infty$). We have
+\begin{align*}
+t[n]=t_0+k\cdot s[n]
+\end{align*}
+where $k\cdot s[n]$ is a mapping from the \readerrx to the actual bit boundaries, which we suppose is linear on the small bit-period time scale. The problem is then, given $\hat{t_0}$, $s$ and $t[i]$,
+%\footnote{We already have an accurate $t[i]$ as we perform the wave form matching and time recovery algorithm introduced in~\ref{subsubsec:clockoffset}}, 
+estimate the next actual bit boundary $t[i+1]$. Our method is to approach the above equation by drawing a line that connects $(s[i], t[i])$ and $(0, \hat{t_0})$ as the following
+\begin{align*}
+\hat t[i+1]=\hat{t_0}+\frac{t[i]-\hat{t_0}}{s[i]}s[i+1]
+\end{align*}
+Therefore
+\begin{align*}
+error_{time}=&\lim_{i\to\infty}\hat t[i+1]-t[i+1]\\
+=&\lim_{i\to\infty}\hat{t_0}+\frac{(t_0+k\cdot s[i])-\hat{t_0}}{s[i]}s[i+1]\\
+& \qquad -(t_0+k\cdot s[i+1])\\
+=&\lim_{i\to\infty}(\hat{t_0}-t_0)(1-\frac{s[i+1]}{s[i]})=0
+\end{align*}
+The result highlights that the deviation of the bit boundary estimate will not propagate, and will converge to zero for infinitely long packets.
+
+\iffalse
+\noindent{\bf B. Proof of Lemma~\ref{lem:lemma2}} 
+Our goal is to prove that using the combination of an LCD and a retro-reflector as a passive emitter is more energy-efficient than using an LED as an active emitter when both systems have the same \reader\ whose LED has a power $P_0$, bit rate $1/\Delta t$, \reader-to-\vitag\ distance $r$, energy used for transmitting per bit $E_{tx}$ and receiving per bit $E_{rx}$, and noise power. We compare the SNRs at \reader\ receiver for the two methods. Further, since the noise power in the two scenarios are the same, we need only compare the quantities of the signal energy per bit $E_{s1}$ and $E_{s2}$. The system with the larger one has a better energy efficiency.
+
+First, for the LCD tag with a retro-reflector, all the energy it transmits is received by the \reader\ receiver, assuming the LED on \reader\ is at the same location with the light sensor. Also, the signal \vitag\ receives is modulated and bounced back. Therefore
+\begin{align}
+E_{s1}=\eta_1\frac{P_0\Delta t}{4\pi r^2}\Delta S_{tag}
+\end{align}
+where $\eta_1$ accounts for the energy dissipation caused by the absorption of the retro-reflector and the direct reflection of the LCD, and $S_{tag}$ denotes the equivalent reflective area on the tag.
+
+Second, for the LED tag that actively transmits, in a bit period, we have
+\begin{align}
+E_{s2}=\eta_2\frac{E_{tx}}{4\pi r^2}\Delta S_{reader}
+\end{align} 
+where $\eta_1$ is the efficiency of the LED tag hardware, and $S_{reader}$ denotes the light sensor area on the reader.
+
+Finally, as we have assumed that the power supplies for both the systems are identical, and for the LCD tag, $E_{tx}=kCV^2$, where $k$ captures the efficiency of the energy reuse module and $CV^2$ denotes the energy cost per LCD capacitor period that corresponds to transmitting one bit, we have
+\begin{align}
+\frac{E_{s1}}{E_{s2}}=\frac{\eta_1 P_0\Delta t\Delta S_{tag}}{\eta_2 kCV^2\Delta S_{reader}}
+\end{align}
+
+Typically, $V=5V$, $C=2000pF$, $k\approx 0.4$, $\eta_1\approx 10^{-2}$, $\eta_2\approx 0.8$, $P_0=8W$, $\Delta S_{reader}=2\times 10^{-5}$ and $\Delta S_{tag}=10^{-3}$. So $\frac{E_{s1}}{E_{s2}}=10^9 \left|\Delta t\right|$. This result shows that if the data rate $1/\Delta t$ is smaller than $10^9bps(=1Gbps)$, then an LCD tag always enables higher energy per bit at the \reader\ receiver than an LED tag. In typical indoor settings, LEDs are primarily used for lighting, the upper bound of whose flickering rate is orders of magnitude smaller than $1GHz$; That is to say, our method is always more energy-efficient than the alternative LED tag.
+\fi

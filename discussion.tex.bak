@@ -1,0 +1,30 @@
+\section{Discussions}
+
+\paragraph{Full Duplex vs Half Duplex}
+Unlike radio backscattering systems where achieving full duplex is extremely challenging due to shared antenna and RF front-end, full duplexing is natural to \retro. This attributes to the fact that separate components are responsible for emitting (LED/retro-reflector) and receiving (photodiode) light. The only difference is that, in full duplexing, the reflected light contains downlink signals whereas in half duplexing, the reflected light is the pure carrier. Full duplexing also incurs extra power consumption as both the receiving and transmitting logics are active and the MCU will be kept at a high working frequency.%, whereas in half duplexing, the MCU will work very low frequency during uplink transmission. 
+ 
+%Our design support both working modes. The major difference is the modulation of the uplink is performed on a pure carrier for the half-duplex mode whereas it will be on the infomation-carrying carrier for the full-duplex mode. In this particular design, as the carrier frequence is much higher (1MHz) and the Manchester coding we used, the basic frequency components of the information-carrying is far apart from the basic frequency components that we used to carry information in the uplink. In addition, in full duplex mode, we may reuse the higher and more accurate clock of the MCU instead of using a RC oscillator. Therefore, the decoding on the ViReader side can be more accurate. The only penalty is that full-duplex will consumes more energy at the ViTag side as both the receiving and transmitting modules are active at the same time, whereas in half-duplex model, they are alternatively active.
+
+%\paragraph{Active Emitting v.s. Backscattering.} 
+%We note that it is also possible to use LEDs on \vitag\ to deliver uplink data transmission using a battery-free design\footnote{This could be achieved by doing smart duty-cycling and adding a capacitor next to the solar cell array to provide the $1mA$ peak current supply for the LED.} in place of the use of retro-reflectors and LCDs. We show, however, that 
+%\begin{lemma}
+%In general cases\footnote{To form a fair comparison, we set the \reader\ LEDs, the light sensors attached to \reader, \vitag-\reader\ distances, working bit rates, the strengths of the signal sent by \vitag\ captured at \reader to be the same for both the cases.}, using LEDs as active emitters is not as energy-efficient as the combination of LCDs and retro-reflectors.
+%\label{lem:lemma2}
+%\end{lemma}
+%We give a proof for this lemma in Appendix.
+
+%\paragraph{Security Advantages}
+%It will also enhance the security of current RFID systems as it limits the uplink signal exposure to line-of-sight, and the use of retro-reflectors will further focus the signal to an even thiner area, leaving less chance for the hidden attackers and sniffers to temper the system.
+
+\paragraph{Size Tradeoff}
+In the \vitag\ implementation, we dedicate two-thirds of the area to solar cell and one-third to retro-reflector. The primary reason is that we have only access to that sized LCD (obtained from 3D glasses) and the availability of solar cells. For a target environment (mainly concerning the illumination condition) and LED power, we expect an optimal ratio between the area of the solar cell to that of retro-reflector so as to achieve maximum communication range. This is of interest when making real products.
+
+
+
+%\paragraph{Bit Rate Adaptation} 
+%\vitag\ supports multiple bit rates on both downlink and uplink. In our implementation, the highest downlink data rate is 1MHz, the highest frequency at which our LED flickers with its full brightness, whereas the highest uplink data rate is 1kHz, at which frequency the LCD works at its half reflectivity. We note that one can always tradeoff the communication range for a higher uplink or downlink datarate, even if the LCD or LED does not work at its fullest voltage range.
+
+%\vskip 0.05in\noindent{\bf (2) Sensing with Solar Cells v.s. Sensing with Photo-diodes} \vitag\ uses a photo-diode to capture light fluctuations. One alternative to using a photo-diode is using the solar cell directly as the light sensor without additional facilities. However, our solar cell is incapable of capturing the light fluctuation faster than $100Hz$~\cite{solarsheet}, yet the data rate on the downlink is orders of magnitude faster than that. So we use a photo-diode, which, further, does not occupy much space on \vitag.
+
+
+%\vskip 0.05in\noindent{\bf (4) Backscattering with Frequency Shifts v.s. Backscattering with Mirrors v.s. Backscattering Directionally} Instead of using the retro-reflector as the backscattering material, another option for the reflective material is phosphors. One merit of phosphors is that it can generate lights that are at a specific spectrum distinguishable from the LED. This would make a great property that the LED-received signal could be sifted our more easily. However, while phosphors can shift the light band through a reflection that involves electron transitions as described in~\ref{sec:background}, the resulting spectrum in reality becomes relatively broad, due to the multiple electron-transition patterns inside phosphors that correspond to the resulting multiple frequencies, which would lead to spectral interferences with the \reader\ transmissions anyway. One could alternatively use the mirror to replace retro-reflectors. However, while mirrors have the advantage on reflectivity over retro-reflectors, they are extremely limited by the angle of incidence at work; Mirrors can only work when the \vitag\ is perfectly pointed at the \reader.

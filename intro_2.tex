@@ -1,0 +1,80 @@
+\section{Introduction}
+
+\begin{figure}[!t]
+\vskip -0.03in
+  \centering
+      {
+        \epsfig{file=../illustrations/sysdiagram.eps, width=0.6\columnwidth}
+      }
+\caption{{\bf Our \vitag\ Prototype} \hl{integrates both mmm in a single design. It can operate using both RFID and TV transmissions}.}
+\label{fig:tag}
+\vskip -0.05in
+\end{figure}
+
+%\p{VLC is promising direction}
+Nowadays, LEDs have been prevalently deployed for illumination purpose for its advantageous properties such as high energy efficiency, long lifetime, environment friendliness, to name a few. Being semiconductor devices, LEDs also possess another feature, i.e.\, it can be turned on and off instantaneously. This effectively turns LED lights into a carrier and gives rise to a new ''dual-paradigm'' -- illumination and communication -- of LED lighting. Thanks to the ubiquity of lighting infrastructure, visible light communication (VLC) has thus attracted lots of research interest~\cite{fundamental1, fundamental2, standard}. A standard (IEEE 802.15.7) has been established recently~\cite{standard} to ensure inter-operation among device manufacturers. Some practical systems such as ByteLight~\cite{ble0} have debuted the exploitation of LED lighting infrastructures for both communication and localization~\cite{location1,location2}. 
+
+%\p{existing solution does not meet two-way communication need}
+Existing work has primarily focused on exploring or improving the one-way link from the LEDs to the mobile ends, i.e.\, from the LEDs to the receiving small computing devices. Indeed, significant advances have been made, e.g.\, VLC systems today can achieve bit rates up to $~10Mbps$ from an LED transmitter to a receiver over a distance of $~10km$~\cite{expensive,expensive2,retro1,retro2}. However, despite these promising results, it solves only half of an actual communication system where two-way communications are essential. In response, in ByteLight and many other smart light system with remote control, a BlueTooth Low Energy link is typically leveraged as the uplink to send information or control messages from a mobile device to the light. 
+
+%\p{The need of low-power solution, not affordable to use LED at mobile device.}
+The dual-paradigm nature of LED lighting, with illumination as the primary goal, naturally leads to an asymmetric communication setting. The transmitters, i.e., LEDs, are externally powered and can emit strong signals, whereas the receivers are typically small computing devices such as mobile phones and even weaker sensors. Applying the LED-photodiode link straightforwardly from a mobile device or sensor node to the lighting LED is not affordable. A typical VLC system consists of an LED, a photodiode and intermediate optical components (e.g., lenses). To achieve high speeds as reported in literatures~\cite{expensive,expensive2,flawedsys3,flawedsys4}, special and expensive hardware pieces such as multiple quantum well electro-absorption modulators and lasers have to be used~\cite{expensive}; They consume orders of magnitude more power than is available on credit-card-sized devices that harvest energy from LED lights~\cite{solarsheet}. In this light, we focus on using ordinary lighting LEDs whose primary goal is illumination. In such a setting, the LED flickering rate is relatively low. For instance, we measured that the rising and falling frequency of an ordinary commodity LED bulb is at most $1MHz$.
+
+% \fye{
+% This ubiquity opens a door for the LEDs to communicate with small computing devices with the emitted lights. The last few years have seen significant advances in VLC systems --- VLC systems today can achieve bit rates up to \hl{ss Mbps} from an LED transmitter to a receiver over a distance of \hl{ss}~\cite{flawedsys1,flawedsys2,flawedsys3,flawedsys4}. Researchers have also demonstrated the VLC capability of providing location services~\cite{location1,location2}. These impressive capabilities are made possible by systems that encode and modulate the light emitted by the LED. However, all these systems, on one hand, either support one-directional communications only from the LED to the device, or require the mobile device to have additional LED~\cite{led2led1}, Bluetooth~\cite{ble1} or other facilities~\cite{retro1,retro2} to transmit the uplink data; On the other hand, achieving such high data rate requires complicated modulation schemes and power-expensive analog-to-digital converters (ADCs) that consume power on the order of \hl{10mW}~\cite{flawedsys1}, alongside the power needed for driving those facilities; this is orders of magnitude more power than is available on credit card-sized devices that harvest power from ambient light sources~\cite{solarsheet}.
+% }
+
+% \p{our goal -- very low power bi-directional VLC, low enough to be affordable by harvesting energy from the LED light. Compared with RFID, it has more favorable security features. }
+In this paper, we ask if it is possible to achieve very low power bi-directional VLC where the mobile end is affordable solely by harvesting energy from the LED light. Such a system would not only work at any location with LEDs at any time, but would also remedy the security flaws typically faced by existing RFID systems, where the uplink transmission tends to be exposed to a wide area of space, leaving chances for sniffers and attackers to temper the system. Thus, a positive answer would enable ubiquitous communication with access to existing network infrastructures at unprecedented spacial and temporal scales with user security preservation. 
+
+%\p{core idea: leverage the retro-reflector to avoid the need of generating high power visible light; use LCD to modulate the reflected lights. }
+Our core idea is as follows. To avoid generating power-expensive visible lights on the mobile end, we use a toggling \textit{Liquid-Crystal Display (LCD)} to modulate a \textit{retro-reflector} that directionally bounces the incoming light back to the LED, which forms a low-power uplink.   
+
+%\p{challenges in achieving the low-power goal: 1) energy consumption at the receiver side; 2) LCD energy consumption at high toggling frequency at the transmitter side; 3) weak signal detection; 4) clock-drift handling at the LED side, without explicit synchronization between transmitter and receiver. }
+Designing such a system, however, is challenging for the following reasons:
+\begin{Itemize}
+\item Demodulating and decoding the high throughput LED-transmitted data is power consuming. 
+\item Transmitting with the LCD at a high toggling frequency consumes even more power than the receiver.
+\item The LED has to detect retro-reflected signals 3 orders of magnitude weaker than its interfering transmissions.
+\item The LED must handle clock offsets on the mobile end that uses a low-cost clock with low oscillating frequency.   
+\end{Itemize}
+%as (1) generating light waves and modulating them typically require much more power than can be harvested from ambient light sources by a small device (see~\ref{sec:app}), and moreover, (2) detecting signals sent by the device at the LED receiver against interferences is hard. In this paper, we introduce \vitag, a VLC system that provides duplex communication capabilities on battery-free devices only using visible light carriers. To address the challenge of detecting signals against interferences on the LED receiver, \vitag\ uses a novel algorithm specifically designed for the LCD-modulated signals. Instead of generating signals, \vitag\ addresses the power constraint challenge by backscattering the incoming light waves using retro-reflectors and modulating using Liquid-Crystal Displays (LCDs). This helps the backscattered signal focus at the receiver on the LED, and avoids generating signals on \vitag. In addition, \vitag\ recycles the LCD modulation energy with an energy reuse module, further optimizing the mobile device size to the size of a regular credit card. Finally, there are a set of other techniques behind the \vitag\ design that make it feasible in real-world illumination system deployment, which we will describe in later sections.
+
+%\p{our design: principles -- 1) use analog components as much as possible (to avoid ADC) and complicated digital signal processing; 2) circuit design to recycle energy for lcd; 3) differential amplifier design? 4) windowed multi-symbol match filter}
+To address these challenges, we apply the following design principles:
+% \begin{Itemize}
+% \item Use differential tunning analog components and avoid complicated digital signal processing on the mobile end to conserve energy while achieving comparable accuracy to when ADCs are used. 
+% \item Recycle energy spared by the LCD at every toggle.
+% \item Design amplifiers that work at an almost cut-off state to further reduce energy consumption.
+% \item Design a sliding-window multi-symbol match filter algorithm to remedy clock drifts and LCD-caused signal distortions.
+% \end{Itemize}
+
+\begin{Itemize}
+\item Use analog components over digital ones while achieving comparable accuracy.
+\item Recycle LCD energy. 
+\item Design energy efficient amplifiers.
+\item Design algorithms to decode signals that suffer from severe clock offsets caused by low-cost mobile end.
+\end{Itemize}
+
+%\textbf{\retro.} To understand our \vitag\ design on battery-free ID card-sized tags, consider an LCD whose emitted light can be manipulated by an additional small circuit inside the light bulb. This circuit embeds information in the light and modulates it, while keeping the brightness of the light the same without any flickering. On the \vitag\ side, a light sensor captures the light signal that conveys information from the LED. To conserve energy, \vitag\ only uses analog components to demodulate the signal without an ADC. Upon detecting data, a low-power micro-controller on \vitag\ is waked up for uplink data transmission. It drives up the LCD to flicker, therefore sending data back to the LED by backscattering the light with a retro-reflector behind the LCD. This uplink data can be captured by a light sensor placed on the LED, along with interferences caused by downlink transmission, nearby human and object movements, household electricity fluctuations, and so on. A specifically designed receiver associated with the LED then performs the time recovery and demodulates the signal. To get a network of \vitag\/s and LEDs into play, we design a Media Access Control (MAC) protocol to mediate the communications in LEDs' illumination range. 
+
+%\p{We demonstrated the design with a batter-free ViTag by harvesting LED light energy. We explore the tradeoff between the solar panel area and retro-reflector area to achieve a maximum working range for a typical lux level. }\todo{This suggests that the optimal value be a function of the solar cell efficiency and the reflecting concentration ratio.}
+We demonstrated the design with a battery-free credit-card-sized \textbf{\vitag}, as shown in Fig.~\ref{fig:tag}, that harvests energy of off-the-shelf LED lights. We also explored the tradeoff between the solar panel area and the retro-reflector area for achieving a maximum working range at a typical $lux$ level. 
+%To show the feasibility of our ideas, we have built a hardware prototype, shown in Fig.~\ref{fig:tag}, that is approximately the size of a credit card. Our prototype includes multiple off-the-shelf LEDs emitting white lights, LED transmitters each stuffed inside an LED, LED receiver PCBs and \vitag\ PCBs. LEDs and \vitag\/s are equipped with a micro-controller, respectively. Our prototype also includes a solar cell of size \hl{ss $\times$ ss} on \vitag.
+
+We evaluate our system in locations where illuminating LEDs are typically deployed, including offices and evening streets. We also evaluate in dark chambers as the baseline. We measure the maximum communication range between the LED and the \vitag\ in varying $lux$, \vitag\ orientation, angle of incidence, solar panel area and retro-reflector area settings. Our experiments show that our \hl{ss $\times$ ss} \vitag\ prototype can achieve a bit rate of \hl{10kbps} on the downlink and \hl{1kbps} on the uplink at distances of up to \hl{2.2m} in dark chambers, \hl{2.0m} on sidewalks in the evening, and \hl{1.5 m} in offices, under the power budget of \hl{400 $\mu W$}. We also evaluate the area in which \vitag\ uplink transmission can be sniffed or tempered. Experiments show \vitag's uplink transmission cannot be detected over the radius of \hl{m}, and malicious readers cannot detect uplink transmissions when \hl{m} away from \vitag\/s.
+
+%\p{contributions: 1) propose the use of retro-reflector for practical two-way VLC; 2) address various challenges; 3) build and evaluate a real prototype system.}
+\vskip 0.05in\noindent{\bf Contributions:} We make the following contributions:
+\begin{Itemize}
+\item We propose the first practical bi-directional VLC primitive that works for small battery-free devices using retro-reflectors and LCDs and ordinary white LEDs.
+\item We address various challenges by designing energy-efficient components on the \vitag\ and an unsynchronized decoding scheme on the LED.
+\item Finally, we build and evaluate a prototype system which shows all of the above.
+\end{Itemize}
+%\begin{Itemize}
+%\item We present \vitag, the first visible light duplex communication system design that operates on battery-free devices while retaining a small size for them.
+%\item We develop a secure communication primitive applicable to RFID systems that acts against side sniffers and malicious transmitters.
+%\item Finally, we present designs and build a prototype which shows how all of the above, from \vitag, modified LEDs, through to the network stack, can be implemented on credit-card sized battery-free devices at a low cost.
+%\end{Itemize}
+
+

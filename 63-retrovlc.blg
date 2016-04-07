@@ -1,0 +1,70 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: 63-retrovlc.aux
+The style file: abbrv.bst
+Database file #1: ourbib.bib
+I was expecting a `,' or a `}'---line 262 of file ourbib.bib
+ :   
+ :   year={2012}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in ble0
+Warning--to sort, need author or key in mrr
+Warning--to sort, need author or key in rr
+Warning--to sort, need author or key in rrsheet
+Warning--empty year in fullduplex3
+Warning--empty year in rfidsec2
+Warning--empty year in fullduplex2
+Warning--empty journal in abc4
+Warning--empty year in abc3
+Warning--empty year in rfidsec1
+Warning--empty year in location1
+Warning--empty year in location3
+Warning--empty year in abc2
+Warning--empty year in eavesdrop1
+Warning--empty year in abc1
+Warning--empty year in location2
+Warning--empty year in led2led4
+Warning--empty year in led2led5
+Warning--empty year in eavesdrop2
+You've used 35 entries,
+            2118 wiz_defined-function locations,
+            648 strings with 9357 characters,
+and the built_in function-call counts, 10987 in all, are:
+= -- 922
+> -- 757
+< -- 0
++ -- 301
+- -- 264
+* -- 763
+:= -- 1894
+add.period$ -- 103
+call.type$ -- 35
+change.case$ -- 236
+chr.to.int$ -- 0
+cite$ -- 54
+duplicate$ -- 405
+empty$ -- 830
+format.name$ -- 264
+if$ -- 2216
+int.to.chr$ -- 0
+int.to.str$ -- 35
+missing$ -- 30
+newline$ -- 174
+num.names$ -- 62
+pop$ -- 358
+preamble$ -- 1
+purify$ -- 201
+quote$ -- 0
+skip$ -- 235
+stack$ -- 0
+substring$ -- 208
+swap$ -- 50
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 138
+warning$ -- 19
+while$ -- 65
+width$ -- 37
+write$ -- 330
+(There was 1 error message)
